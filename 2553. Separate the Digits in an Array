@@ -1,0 +1,27 @@
+Approach 1 : List Comprehension 
+
+class Solution:
+    def separateDigits(self, nums: List[int]) -> List[int]:
+        return [int(digit) for num in nums for digit in str(num)]
+
+Approach 2 : Nested Loop
+
+class Solution:
+    def separateDigits(self, nums: List[int]) -> List[int]:
+        answer = []
+        for num in nums:
+            for digit in str(num):
+                answer.append(int(digit))
+        return answer
+
+Approach 3 : Independent Loops
+
+class Solution:
+    def separateDigits(self, nums: List[int]) -> List[int]:
+        text = ''
+        answer = []
+        for num in nums:
+            text += str(num)
+        for digit in text:
+            answer.append(int(digit))
+        return answer
