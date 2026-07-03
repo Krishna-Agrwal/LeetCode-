@@ -1,1 +1,17 @@
-
+class Solution:
+    def countValidSubarrays(self, nums: list[int], x: int) -> int:
+        n = len(nums)
+        valid_count = 0
+        
+        for i in range(n):
+            current_sum = 0
+            for j in range(i, n):
+                # Add the current element to expand the subarray nums[i..j]
+                current_sum += nums[j]
+                
+                # Condition 1: Check the last digit
+                if current_sum % 10 == x:
+                    if int(str(current_sum)[0]) == x:
+                        valid_count += 1
+                        
+        return valid_count
