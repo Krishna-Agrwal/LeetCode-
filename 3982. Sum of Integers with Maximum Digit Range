@@ -1,1 +1,25 @@
-
+class Solution:
+    def maxDigitRange(self, nums: list[int]) -> int:
+        nums_updated = []
+        digit_range = []
+        output = 0
+        
+        for i in range(0, len(nums)):
+            a = "".join(sorted(str(nums[i])))
+            nums_updated.append(a)
+            
+        for items in nums_updated:
+            a = items[0]
+            b = items[-1]
+            c = int(b)-int(a)
+            digit_range.append(c)
+            
+        digit_range.sort()
+        highest_digit = digit_range[-1]
+        
+        for check in range(0, len(nums)):
+            current_num_range = int(nums_updated[check][-1]) - int(nums_updated[check][0])
+            if current_num_range == highest_digit:
+                output = output + nums[check]
+                
+        return output
