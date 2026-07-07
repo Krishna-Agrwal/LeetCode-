@@ -1,1 +1,139 @@
+class Solution:
+    def numberOfSpecialChars(self, word: str) -> int:
+        #word_list = list(word)
+        count = 0
+        
+        # rindex, is used to check the index of the last occurence of that character.
+        # Jaisa example 3 mein "b" two index mein hai, 1 aur 5 aur "B" ekh index mein, 2. agar ham sirf index() use karta hai toh 1<2 check hoga and agar ham rindex() use karta hai toh 5<2, joki correct hai 
 
+        # 'a' and 'A'
+        if "a" in word and "A" in word:
+            if word.rindex("a") < word.index("A"):
+                count = count + 1
+                
+        # 'b' and 'B'
+        if "b" in word and "B" in word:
+            if word.rindex("b") < word.index("B"):
+                count = count + 1
+                
+        # 'c' and 'C'
+        if "c" in word and "C" in word:
+            if word.rindex("c") < word.index("C"):
+                count = count + 1
+                
+        # 'd' and 'D'
+        if "d" in word and "D" in word:
+            if word.rindex("d") < word.index("D"):
+                count = count + 1
+                
+        # 'e' and 'E'
+        if "e" in word and "E" in word:
+            if word.rindex("e") < word.index("E"):
+                count = count + 1
+                
+        # 'f' and 'F'
+        if "f" in word and "F" in word:
+            if word.rindex("f") < word.index("F"):
+                count = count + 1
+                
+        # 'g' and 'G'
+        if "g" in word and "G" in word:
+            if word.rindex("g") < word.index("G"):
+                count = count + 1
+                
+        # 'h' and 'H'
+        if "h" in word and "H" in word:
+            if word.rindex("h") < word.index("H"):
+                count = count + 1
+                
+        # 'i' and 'I'
+        if "i" in word and "I" in word:
+            if word.rindex("i") < word.rindex("I"):
+                count = count + 1
+                
+        # 'j' and 'J'
+        if "j" in word and "J" in word:
+            if word.rindex("j") < word.rindex("J"):
+                count = count + 1
+                
+        # 'k' and 'K'
+        if "k" in word and "K" in word:
+            if word.rindex("k") < word.rindex("K"):
+                count = count + 1
+                
+        # 'l' and 'L'
+        if "l" in word and "L" in word:
+            if word.rindex("l") < word.rindex("L"):
+                count = count + 1
+                
+        # 'm' and 'M'
+        if "m" in word and "M" in word:
+            if word.rindex("m") < word.rindex("M"):
+                count = count + 1
+                
+        # 'n' and 'N'
+        if "n" in word and "N" in word:
+            if word.rindex("n") < word.rindex("N"):
+                count = count + 1
+                
+        # 'o' and 'O'
+        if "o" in word and "O" in word:
+            if word.rindex("o") < word.rindex("O"):
+                count = count + 1
+                
+        # 'p' and 'P'
+        if "p" in word and "P" in word:
+            if word.rindex("p") < word.rindex("P"):
+                count = count + 1
+                
+        # 'q' and 'Q'
+        if "q" in word and "Q" in word:
+            if word.rindex("q") < word.rindex("Q"):
+                count = count + 1
+                
+        # 'r' and 'R'
+        if "r" in word and "R" in word:
+            if word.rindex("r") < word.rindex("R"):
+                count = count + 1
+                
+        # 's' and 'S'
+        if "s" in word and "S" in word:
+            if word.rindex("s") < word.rindex("S"):
+                count = count + 1
+                
+        # 't' and 'T'
+        if "t" in word and "T" in word:
+            if word.rindex("t") < word.rindex("T"):
+                count = count + 1
+                
+        # 'u' and 'U'
+        if "u" in word and "U" in word:
+            if word.rindex("u") < word.rindex("U"):
+                count = count + 1
+                
+        # 'v' and 'V'
+        if "v" in word and "V" in word:
+            if word.rindex("v") < word.rindex("V"):
+                count = count + 1
+                
+        # 'w' and 'W'
+        if "w" in word and "W" in word:
+            if word.rindex("w") < word.rindex("W"):
+                count = count + 1
+                
+        # 'x' and 'X'
+        if "x" in word and "X" in word:
+            if word.rindex("x") < word.rindex("X"):
+                count = count + 1
+                
+        # 'y' and 'Y'
+        if "y" in word and "Y" in word:
+            if word.rindex("y") < word.rindex("Y"):
+                count = count + 1
+                
+        # 'z' and 'Z'
+        if "z" in word and "Z" in word:
+            if word.rindex("z") < word.rindex("Z"):
+                count = count + 1
+                
+        return count
