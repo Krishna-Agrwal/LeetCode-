@@ -1,1 +1,12 @@
+import string
 
+class Solution:
+    def numberOfSpecialChars(self, word: str) -> int:
+        set_word = set(word)
+        count = 0
+        
+        for char in string.ascii_lowercase:
+            if char in set_word and char.upper() in set_word:
+                count = count + 1
+                
+        return count
