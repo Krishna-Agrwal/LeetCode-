@@ -1,0 +1,26 @@
+class Solution:
+    def sumAndMultiply(self, n: int) -> int:
+        a = str(n)
+        x = ""
+        sum = 0
+        
+        # Filter out non-zero digits and construct the string 'x'
+        for i in range(0, len(a)):
+            if a[i] == '0':
+                continue
+            else:
+                x = x + a[i]  # Append the character at index 'i', not the index itself
+        
+        # Edge case: If there are no non-zero digits, return 0 as per constraints
+        if not x:
+            return 0
+            
+        # Calculate the sum of digits directly using the filtered string 'x'
+        for i in x:
+            sum = sum + int(i)
+            
+        # Convert the filtered string to an integer
+        b = int(x)
+        
+        # Return the product of the formed integer and the sum of its digits
+        return b * sum
