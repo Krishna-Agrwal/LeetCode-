@@ -1,1 +1,5 @@
-
+class Solution:
+    def getConcatenation(self, nums: List[int]) -> List[int]:
+        clone = nums[:]
+        nums.extend(clone)
+        return nums
