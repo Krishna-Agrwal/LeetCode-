@@ -1,0 +1,30 @@
+class Solution:
+    def shuffle(self, nums: List[int], n: int) -> List[int]:
+        output = []
+        n = len(nums)//2
+        a = nums[0:n+1]
+        b = nums[n:]
+        if len(a) == len(b):
+            for i in range(0,len(a)):
+                output.append(a[i])
+                for j in range(0,len(b)):
+                    output.append(b[i])
+                    break
+
+        elif len(a) > len(b):
+            for i in range(0,len(b)):
+                output.append(a[i])
+                for j in range(0,len(b)):
+                    output.append(b[i])
+                    break
+
+        elif len(a) < len(b):
+            for i in range(0,len(a)):
+                output.append(a[i])
+                for j in range(0,len(a)):
+                    output.append(b[i])
+                    break
+                    
+        return output
+
+        
