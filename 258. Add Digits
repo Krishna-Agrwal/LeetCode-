@@ -1,0 +1,14 @@
+class Solution:
+    def addDigits(self, num: int) -> int:
+        # Jab tak number single digit nahi ho jata (yaani > 9 hai)
+        while num > 9:
+            digit_sum = 0
+            # Digits nikal kar sum karne ka loop
+            while num > 0:
+                digit_sum += num % 10  # Aakhri digit nikalna
+                num = num // 10         # Aakhri digit ko remove karna
+            
+            # num ko naye sum se update kar dena
+            num = digit_sum
+            
+        return num
