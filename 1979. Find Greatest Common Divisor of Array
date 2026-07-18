@@ -1,0 +1,20 @@
+Approach 1 : Using Built in Methods 
+
+import math
+class Solution:
+    def findGCD(self, nums: List[int]) -> int:
+        sorted_nums = sorted(nums)
+        smallest_number = sorted_nums[0]
+        largest_number = sorted_nums[-1]
+        return math.gcd(smallest_number, largest_number)
+
+
+Approach 2 : Using Loop 
+
+class Solution:
+    def findGCD(self, nums: List[int]) -> int:
+        smallest_number = min(nums)
+        largest_number = max(nums)
+        for i in range(smallest_number, 0, -1):
+            if smallest_number % i == 0 and largest_number % i == 0:
+                return i
