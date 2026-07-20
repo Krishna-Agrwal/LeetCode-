@@ -1,0 +1,9 @@
+class Solution:
+    def checkPowersOfThree(self, n: int) -> bool:
+        while n > 0:
+            # Agar remainder 2 aaya, toh distinct powers possible nahi hain
+            if n % 3 == 2:
+                return False
+            # Agli power check karne ke liye 3 se divide karein
+            n //= 3
+        return True
