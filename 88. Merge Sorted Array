@@ -1,0 +1,16 @@
+class Solution:
+
+    def merge(
+        self, nums1: List[int], m: int, nums2: List[int], n: int
+    ) -> None:
+        """Do not return anything, modify nums1 in-place instead."""
+        # 1. nums2 ke elements nums1 mein add karein
+        nums1.extend(nums2)
+
+        # 2. Loop / Traversal se n extra zeroes ko pop karein
+        # Sahi m position par jo zeroes hain unhe hatane ke liye n baar loop chalayein
+        for _ in range(n):
+            nums1.pop(m)
+
+        # 3. Complete list ko sort karein
+        nums1.sort()
