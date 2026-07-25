@@ -1,0 +1,7 @@
+class Solution:
+    def maxProduct(self, n: int) -> int:
+        # Convert number to digits and sort them in ascending order
+        digits = sorted(str(n))
+        
+        # Multiply the two largest digits (the last two elements)
+        return int(digits[-1]) * int(digits[-2])
