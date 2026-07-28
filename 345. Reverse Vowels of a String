@@ -1,0 +1,30 @@
+class Solution:
+    def reverseVowels(self, s: str) -> str:
+        # All vowels in lower and upper case
+        all_vowels = "aeiouAEIOU"
+        
+        # Original string ko list mein convert kar rahe hain taaki replace kar sakein
+        s_list = list(s)
+        
+        found_vowels = []
+        vowel_indices = []
+        
+        # Step 1: Normal loop se vowels aur unke indices nikalo
+        for i in range(len(s)):
+            char = s[i]
+            if char in all_vowels:
+                found_vowels.append(char)
+                vowel_indices.append(i)
+        
+        # Step 2: Vowels ko reverse kar do
+        found_vowels.reverse()
+        
+        # Step 3: Bilkul simple loop se original indices par reversed vowels replace karo
+        for i in range(len(vowel_indices)):
+            target_index = vowel_indices[i]
+            reversed_vowel = found_vowels[i]
+            
+            s_list[target_index] = reversed_vowel
+            
+        # List ko wapas string bana kar return kar do
+        return "".join(s_list)
